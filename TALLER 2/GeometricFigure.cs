@@ -1,25 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace Geometry
 {
-    abstract class GeometricFigure
+    public abstract class GeometricFigure
     {
         public string Name { get; }
 
-        protected GeometricFigure(string name)
-        {
-            Name = name ?? throw new ArgumentNullException(nameof(name));
-        }
+        protected GeometricFigure(string name) => Name = name;
 
         public abstract double GetArea();
         public abstract double GetPerimeter();
-        public override string ToString() => $"{Name} => Área: {GetArea():F2} Perímetro: {GetPerimeter():F2}";
+
+        public override string ToString() => $"{Name} => Area: {GetArea():F5}, Perimeter: {GetPerimeter():F5}";
     }
 }
 
-    
 
-    
 
-   
+
+
+
+
+
+

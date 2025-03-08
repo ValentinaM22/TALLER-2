@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Geometry
-
+public class Square : GeometricFigure
 {
-    class Square : GeometricFigure
+    public double A { get; }
+
+    public Square(string name, double a) : base(name)
     {
-        public double A { get; }
-        public Square(string name, double a) : base(name) { A = a; }
-        public override double GetArea() => A * A;
-        public override double GetPerimeter() => 4 * A;
+        A = a;
     }
+
+    public override double GetArea() => A * A;
+    public override double GetPerimeter() => 4 * A;
 }
+

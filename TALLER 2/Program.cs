@@ -16,4 +16,4 @@
     {
         Console.WriteLine(figure);
     }
-}
+}    

@@ -8,20 +8,18 @@ using System.Threading.Tasks;
 namespace Geometry
 
 {
-    class Parallelogram : GeometricFigure
+    public class Parallelogram : Rectangle
     {
-        public double Base { get; }
-        public double Height { get; }
-        public double Side { get; }
+        private double H;
 
-        public Parallelogram(string name, double baseLength, double height, double side) : base(name)
+        public Parallelogram(string name, double a, double b, double h) : base(name, a, b)
         {
-            Base = baseLength;
-            Height = height;
-            Side = side;
+            H = h;
         }
 
-        public override double GetArea() => Base * Height;
-        public override double GetPerimeter() => 2 * (Base + Side);
+        public override double GetArea() => B * H;
+        public override double GetPerimeter() => 2 * (A + B);
+
     }
 }
+

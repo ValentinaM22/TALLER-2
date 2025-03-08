@@ -7,21 +7,19 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    class Triangle : GeometricFigure
+    public class Triangle : Rectangle
     {
-        public double A { get; }
-        public double B { get; }
         public double C { get; }
-        public double Height { get; }
+        public double H { get; }
 
-        public Triangle(string name, double a, double b, double c, double height) : base(name)
+        public Triangle(string name, double A, double B, double c, double h) : base(name, A, B)
         {
-            A = a;
-            B = b;
             C = c;
-            Height = height;
+            H = h;
         }
-        public override double GetArea() => (A * Height) / 2;
+
+        public override double GetArea() => ((B * H) / 2);
+       
         public override double GetPerimeter() => A + B + C;
     }
 }
