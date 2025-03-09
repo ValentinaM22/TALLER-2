@@ -12,10 +12,14 @@ namespace Geometry
         public double D1 { get; }
         public double D2 { get; }
 
-
         public Rhombus(string name, double a, double d1, double d2)
             : base(name, a)
         {
+            if (a <= 0 || d1 <= 0 || d2 <= 0)
+            {
+                throw new ArgumentException("Values must be greater than zero.");
+            }
+
             D1 = d1;
             D2 = d2;
         }

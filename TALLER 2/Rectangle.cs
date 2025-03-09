@@ -13,6 +13,11 @@ namespace Geometry
 
         public Rectangle(string name, double a, double b) : base(name, a)
         {
+            if (a <= 0 || b <= 0)
+            {
+                throw new ArgumentException("Values must be greater than zero.");
+            }
+
             B = b;
         }
 

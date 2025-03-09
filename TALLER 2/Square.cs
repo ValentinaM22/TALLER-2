@@ -11,6 +11,11 @@ public class Square : GeometricFigure
 
     public Square(string name, double a) : base(name)
     {
+        if (a <= 0)
+        {
+            throw new ArgumentException("Value must be greater than zero.");
+        }
+
         A = a;
     }
 
